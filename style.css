@@ -1,0 +1,147 @@
+:root {
+  /* ### Primary */
+
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue-main: hsl(217, 54%, 11%);
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --font: 'Outfit', sans-serif;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Very-dark-blue-main);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+}
+.card {
+  margin: auto;
+  padding: 22px;
+  border-radius: 15px;
+  width: 310px;
+  background-color: var(--Very-dark-blue-card);
+}
+.card .h_img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.card .h_img img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.card .h_img .view {
+  background-color: hsla(178, 100%, 50%, 0.483);
+  padding: 110px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.card .h_img:hover .view {
+  z-index: 1;
+  transition: 1s ease;
+}
+.card h2 {
+  font-weight: 600;
+  color: var(--White);
+  padding: 18px 0;
+  cursor: pointer;
+}
+.card h2:hover {
+  color: var(--Cyan);
+  transition: 1s;
+}
+.card p {
+  font-family: var(--White);
+  color: var(--Soft-blue);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card .eth {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+.card .eth div {
+  position: relative;
+}
+.card .eth h3 {
+  padding-left: 18px;
+  color: var(--Cyan);
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 400;
+}
+.card .eth p {
+  font-size: 15px;
+  display: inline-block;
+}
+
+.eth img {
+  top: 2px;
+  position: absolute;
+}
+.eth .p_i {
+  right: 75px;
+}
+.card .f_sec {
+  position: relative;
+  padding: 15px 0 8px 0;
+}
+.card .f_sec .avatar {
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  top: 12px;
+  position: absolute;
+}
+.f_sec .footer_p {
+  display: inline;
+  padding-left: 45px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.footer_p span {
+  color: var(--White);
+  cursor: pointer;
+}
+.footer_p span:hover {
+  color: var(--Cyan);
+  transition: 1s;
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 30px;
+  color: var(--White);
+}
+.attribution a {
+  color: hsl(157, 95%, 46%);
+  text-decoration: underline purple;
+}
+
+@media (max-width: 320px) {
+  .card {
+    width: 95%;
+  }
+}
